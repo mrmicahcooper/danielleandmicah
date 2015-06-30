@@ -10,6 +10,11 @@ gem 'rails', '4.2.3'
 gem 'sass-rails'
 gem 'thin'
 
+group :production do
+  gem 'rails_12factor'
+end
+
+
 group :development, :test do
   gem 'capybara-webkit'
   gem 'cucumber-rails', require: false
