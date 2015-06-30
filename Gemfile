@@ -12,7 +12,7 @@ gem 'thin'
 
 group :development, :test do
   gem 'capybara-webkit'
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', require: false
   gem 'database_cleaner'
   gem 'fabrication'
   gem 'letter_opener'
