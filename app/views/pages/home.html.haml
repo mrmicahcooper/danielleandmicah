@@ -1,1 +1,225 @@
-Hello
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %title Union - HTML Wedding Template
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    = stylesheet_link_tag "application"
+    -# %link{:href => "css/bootstrap.min.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+    -# %link{:href => "css/flexslider.min.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+    -# %link{:href => "css/theme.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+    -# %link{:href => "css/custom.css", :media => "all", :rel => "stylesheet", :type => "text/css"}/
+    = stylesheet_link_tag "//fonts.googleapis.com/css?family=Lato:100,300,400,700%7CLibre+Baskerville:400,400italic"
+    -# %link{:href => "http://fonts.googleapis.com/css?family=Lato:100,300,400,700%7CLibre+Baskerville:400,400italic", :rel => "stylesheet", :type => "text/css"}/
+  %body
+    .nav-container
+      %nav.nav.nav-1.transparent.light
+        %a.logo{:href => "index.html"}
+          %span Danielle and Micah
+        %ul.menu
+          %li
+            %a.inner-link{:href => "#home", :target => "default"} home
+          %li
+            %a.inner-link{:href => "#story", :target => "default"} our story
+          %li
+            %a.inner-link{:href => "#wedding", :target => "default"} wedding
+          %li
+            %a.inner-link{:href => "#accomm", :target => "default"} accomm
+          %li
+            %a.inner-link{:href => "#registry", :target => "default"} registry
+          %li
+            %a.inner-link{:href => "#rsvp", :target => "default"} rsvp
+        .mobile-toggle
+          .line-1
+          .line-2
+          .line-3
+    .main-container
+      %a#home.in-page-link
+      %section.header.header-1.fullscreen.overlay
+        .background-image-holder
+
+          = image_tag "hero1.jpg", alt: "Background image", class: "background-image"
+          -# %img.background-image{:alt => "Background image", :src => "images/hero1.jpg"}/
+        .container
+          .row
+            .text-center.col-sm-12
+              %h1 Danielle and Micah
+              %h6 May 21, 2016
+      %a#story.in-page-link
+      %section.story.story-1
+        .container
+          .row
+            .col-md-8.col-md-offset-2.col-sm-10.col-sm-offset-1.text-center
+              %h2 Join Sam & Aisha on the 6th of August to celebrate their union.
+              %h6 A little about the bride and groom.
+          .row
+            .col-md-4.col-md-offset-2.col-sm-6.feature
+              = image_tag "tall1.jpg", alt: "Photo"
+              -# %img{:alt => "Photo", :src => "img/tall1.jpg"}/
+              %p
+                You have been my best friend, mentor, playmate, confidant, and my greatest challenge. But most importantly, you are the love of my life and you make me happier than I could ever imagine and more loved than I ever thought possible.
+            .col-md-4.col-sm-6.feature
+              = image_tag "tall2.jpg", alt: "Photo"
+              -# %img{:alt => "Photo", :src => "img/tall2.jpg"}/
+              %p
+                I love you for your beauty, your intelligence, your kindness… and for the way you always know how to make me feel so special. So on top of all the other vows that I will make to you on our wedding day, I also vow to always appreciate how lucky I am.
+      %section.details.details-2.overlay.parallax
+        .background-image-holder
+          %img.background-image{:alt => "Background image", :src => "img/hero2.jpg"}/
+        .container
+          .row
+            .col-sm-12.text-center
+              %h1 SAVE THE DATE
+              %h4 Saturday August 6th - Bucks & Hens details to follow.
+      %a#wedding.in-page-link
+      %section.details.details-3
+        .container
+          .row
+            .col-md-8.col-md-offset-2.col-sm-10.col-sm-offset-1.text-center
+              %p
+                I guess you could call this a typical "boy meets girl in bar" story but with a twist!  Boy buys girl a drink, girl gives boy phone number. Two months and several thousand kilometers later and said boy and girl are head over heels for each other. Fast forward to today and we're settling down in our first home ready to tie the knot.
+          .row
+            .col-md-4.col-md-offset-2.col-sm-6.text-center.feature
+              %h5 Ceremony
+              %p
+                %strong Montrose Vineyard
+                %br/
+                2:30pm - 3:30pm
+                %br/
+                65 Chilvers Avenue
+                %br/
+                Flinders Ranges, Vic
+            .col-md-4.col-sm-6.text-center.feature
+              %h5 Reception
+              %p
+                %strong Flinders Country Club
+                %br/
+                4:30pm - Late
+                %br/
+                1021 Greenvale Road
+                %br/
+                Flinders Ranges, Vic
+      %a#accomm.in-page-link
+      %section.accom.accom-2.bg-secondary
+        .container
+          .row
+            .col-sm-12.text-center
+              %h2 Where To Stay?
+          .row
+            .col-sm-4.feature
+              %a{:href => "#"}
+                %img{:alt => "Hotel", :src => "img/small5.jpg"}/
+              %h6 Sheraton Flinders
+              %p
+                Mention our names when making your reservation to recieve the group booking discount.
+              %p
+                767 Greenvale Road
+                %br/
+                Flinders Vic 3214
+            .col-sm-4.feature
+              %a{:href => "#"}
+                %img{:alt => "Hotel", :src => "img/small6.jpg"}/
+              %h6 Camp Crusty, Flinders
+              %p
+                Limited cabins are available at Camp Krusty for groups with up to 8 guests.
+              %p
+                122 Chilvers Avenue
+                %br/
+                Flinders, VIC 3214
+            .col-sm-4.feature
+              %a{:href => "#"}
+                %img{:alt => "Hotel", :src => "img/small7.jpg"}/
+              %h6 Flinders Country Club
+              %p
+                A great option for the budget-concious with rooms for up to 4 guests.
+              %p
+                65 Chilvers Avenue
+                %br/
+                Flinders, VIC 3214
+      %a#registry.in-page-link
+      %section.registry.registry-1.registry-3.overlay-light.parallax
+        .background-image-holder
+          %img.background-image{:alt => "Background image", :src => "img/hero6.jpg"}/
+        .container
+          .row
+            .col-sm-12.text-center
+              %h2 Give the gift of presents
+          .row
+            .col-md-4.col-md-offset-2.col-sm-6.text-center
+              %a{:href => "#"}
+                %img{:alt => "Registry", :src => "img/r1.png"}/
+            .col-md-4.col-sm-6.text-center
+              %a{:href => "#"}
+                %img{:alt => "Registry", :src => "img/r2.png"}/
+          .row
+            .col-md-4.col-md-offset-2.col-sm-6.text-center
+              %a{:href => "#"}
+                %img{:alt => "Registry", :src => "img/r4.png"}/
+            .col-md-4.col-sm-6.text-center
+              %a{:href => "#"}
+                %img{:alt => "Registry", :src => "img/r3.png"}/
+      %a#rsvp.in-page-link
+      %section.rsvp.rsvp-2
+        .container
+          .row
+            .col-sm-12.text-center
+              %h1 Say you'll be there
+              %p
+                Please let us know if you can make it by
+                %br/
+                July 10th at the latest, preesh!
+          .row
+            .col-sm-12.text-center
+              .form-wrapper
+                %form.form-email
+                  .form-section
+                    %input.validate-required{:name => "name", :placeholder => "Your Name / Names", :type => "text"}/
+                    .radio-group
+                      .radio-holder.btn.checked
+                        %span Can't Wait
+                        %input{:checked => "checked", :name => "rsvp", :type => "radio", :value => "attending"}/
+                      .radio-holder.btn
+                        %span Can't Come
+                        %input{:name => "rsvp", :type => "radio", :value => "not-attending"}/
+                  .form-section
+                    %h6 Meal Preference
+                    .radio-group
+                      .radio-holder.naked.checked
+                        %span Chicken
+                        %input{:checked => "checked", :name => "meal", :type => "radio", :value => "chicken"}/
+                      .radio-holder.naked
+                        %span Beef
+                        %input{:name => "meal", :type => "radio", :value => "beef"}/
+                      .radio-holder.naked
+                        %span Veg / GF
+                        %input{:name => "meal", :type => "radio", :value => "veg-gf"}/
+                  .form-section
+                    %input{:name => "song", :placeholder => "Any Song Requests?", :type => "text"}/
+                  %input{:type => "submit", :value => "RSVP"}/
+                  .form-error
+                    %span Please fill out all fields
+                  .form-success
+                    %span Thanks for your RSVP!
+      %section.gallery.gallery-2.overlay
+        .instafeed{"data-user-name" => "katiestoops"}
+          %ul
+        .container
+          .row
+            .col-sm-12.text-center
+              %a{:href => "#"}
+                %h1 #sam+aisha
+                %h6 Share the day on Instagram
+      %footer.footer.footer-1
+        .container
+          .row
+            .col-sm-12.text-center
+              %h6 © Copyright 2015 Medium Rare - All Rights Reserved
+    = javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"
+    = javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/ScrollToPlugin.min.js"
+
+    -# %script{:src => "js/smooth-scroll.min.js"}
+    -# %script{:src => "js/placeholders.min.js"}
+    -# %script{:src => "js/flexslider.min.js"}
+    -# %script{:src => "js/spectragram.min.js"}
+    -# %script{:src => "js/scripts.js"}
+    -# %script{:src => "js/bootstrap.min.js"}
