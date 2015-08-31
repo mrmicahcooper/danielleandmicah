@@ -25,7 +25,12 @@
     .container
       .row
         .col-sm-12.text-center
-          %h1 DANIELLE &amp; MICAH
+          %h1
+            DANIELLE
+            %br
+            &amp;
+            %br
+            MICAH
           %h6 May 21st 2016
   %a#about-us.in-page-link
   %section.story.story-1
@@ -51,16 +56,14 @@
       .row
         .col-sm-12.text-center
           %h6 Ceremony &amp; Reception
-          %h1 Club Continental
+          %h1= link_to "Club Continental", "#"
           %p
-            Mention our names when making your reservation
-            %br
-              to receive the group booking discount.
-          %p
-            767 Greenvale Road
-            %br
-              Flinders Vic 3214
-          %a.btn.btn-white{:href => "#"} RSVP
+            = link_to "#" do
+              2143 Astor St
+              %br
+              Orange Park, FL 32073
+
+          %a.btn.btn-white{:href => "#rsvp"} RSVP
   %a#registry.in-page-link
   %section.registry.registry-1
     .container
@@ -69,21 +72,22 @@
           %h2 Give the gift of presents
       .row
         .col-md-4.col-sm-6.text-center
-          = link_to "#" do
-            = image_tag("r1.png")
+          = link_to "http://www.target.com/gift-registry/giftgiver?registryId=eo-WHWmB6HP05GSugg0qXw&registryType=WEDDING", target: :blank do
+            = image_tag("r5.png")
         .col-md-4.col-sm-6.text-center
           = link_to "#" do
             = image_tag("r2.png")
         .col-md-4.col-sm-6.text-center
           = link_to "#" do
             = image_tag("r3.png")
+
       .row
         .col-md-4.col-sm-6.text-center
           = link_to "#" do
             = image_tag("r4.png")
         .col-md-4.col-sm-6.text-center
           = link_to "#" do
-            = image_tag("r5.png")
+            = image_tag("r1.png")
         .col-md-4.col-sm-6.text-center
           = link_to "#" do
             = image_tag("r6.png")
@@ -111,7 +115,7 @@
           %p
             Please let us know if you can make it by
             %br
-              July 10th at the latest, preesh!
+            February 1st at the latest, please!
       .row
         .col-sm-12.text-center
           .form-wrapper
