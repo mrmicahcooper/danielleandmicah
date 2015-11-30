@@ -1,0 +1,67 @@
+worker_processes  1;
+
+error_log  /usr/local/var/log/nginx.error.log;
+
+events {
+  worker_connections  1024;
+}
+
+http {
+  include            mime.types;
+  default_type       application/octet-stream;
+  sendfile           on;
+  keepalive_timeout  65;
+
+  upstream dev {
+    server 127.0.0.1:3000;
+  }
+
+  upstream services {
+    server 127.0.0.1:3001;
+  }
+
+  server {
+    server_name  services.dev;
+    listen       80;
+    root         /dev/null;
+    index        index.html index.htm;
+
+    try_files  $uri/index.html $uri.html $uri @services;
+
+    location @services {
+      proxy_set_header  X-Real-IP        $remote_addr;
+      proxy_set_header  X-Forwarded-For  $proxy_add_x_forwarded_for;
+      proxy_set_header  Host             $http_host;
+      proxy_redirect    off;
+      proxy_pass        http://services;
+    }
+    error_page   500 502 503 504  /50x.html;
+  }  
+
+  server {
+    server_name  wantful.dev;
+    listen       80;
+
+# You could put a server_name directive here (or multiple) if
+# you have not setup wildcard DNS for *.dev domains
+# See http://jessedearing.com/nodes/9-setting-up-wildcard-subdomains-on-os-x-10-6
+
+# If we choose a root, then we can't switch things around easily
+# Using /dev/null means that static assets are served through
+# Rails instead, which for development is okay
+    root         /dev/null;
+
+    index        index.html index.htm;
+
+    try_files  $uri/index.html $uri.html $uri @dev;
+
+    location @dev {
+      proxy_set_header  X-Real-IP        $remote_addr;
+      proxy_set_header  X-Forwarded-For  $proxy_add_x_forwarded_for;
+      proxy_set_header  Host             $http_host;
+      proxy_redirect    off;
+      proxy_pass        http://dev;
+    }
+    error_page   500 502 503 504  /50x.html;
+  }  
+}
