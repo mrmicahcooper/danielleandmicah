@@ -73,27 +73,18 @@
       .row
         .col-sm-12.text-center
           %h2 Give the gift of presents
-      .row
-        .col-md-4.col-sm-6.text-center
-          = link_to "http://www.target.com/gift-registry/giftgiver?registryId=eo-WHWmB6HP05GSugg0qXw&registryType=WEDDING", target: :blank do
-            = image_tag("r5.png")
-        .col-md-4.col-sm-6.text-center
-          = link_to "#" do
-            = image_tag("r2.png")
-        .col-md-4.col-sm-6.text-center
-          = link_to "#" do
-            = image_tag("r3.png")
 
       .row
         .col-md-4.col-sm-6.text-center
-          = link_to "#" do
-            = image_tag("r4.png")
+          = link_to "http://www.target.com/gift-registry/giftgiver?registryId=eo-WHWmB6HP05GSugg0qXw&registryType=WEDDING", target: :blank do
+            = image_tag("target.png")
         .col-md-4.col-sm-6.text-center
-          = link_to "#" do
-            = image_tag("r1.png")
+          = link_to "http://www.amazon.com/registry/wedding/15OP7Z23DDHJ7", target: :blank do
+            = image_tag("amazon.png")
         .col-md-4.col-sm-6.text-center
-          = link_to "#" do
-            = image_tag("r6.png")
+          = link_to "https://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?registryId=542830440&eventType=Wedding", target: :blank do
+            = image_tag("bedbathandbeyond.png")
+
   %section.story.story-4
     .container
       .row
@@ -108,7 +99,7 @@
           %h2 It started with a kiss…
           %p
             I guess you could call this a typical "boy meets girl in bar" story but with a twist!  Boy buys girl a drink, girl gives boy phone number. Two months and several thousand kilometers later and said boy and girl are head over heels for each other. Fast forward to today and we're settling down in our first home ready to tie the knot.
-          = image_tag "signature.png"
+          -# = image_tag "signature.png"
   %a#rsvp.in-page-link
   %section.rsvp.rsvp-2
     .container
