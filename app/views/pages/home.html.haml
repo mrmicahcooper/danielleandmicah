@@ -113,30 +113,29 @@
       .row
         .col-sm-12.text-center
           .form-wrapper
-            %form.form-email
+            = form_for(reservation, class: :form_email) do |f|
               .form-section
-                %input.validate-required{:name => "name", :placeholder => "Your Name / Names", :type => "text"}
-                  .radio-group
-                    .radio-holder.btn.checked
-                      %span Can't Wait
-                      %input{:checked => "checked", :name => "rsvp", :type => "radio", :value => "attending"}
-                    .radio-holder.btn
-                      %span Can't Come
-                      %input{:name => "rsvp", :type => "radio", :value => "not-attending"}
+                = f.text_field :name, placeholder: "Name", class: "validate-required"
+                .radio-group
+                  .radio-holder.btn.checked
+                    %span Can't Wait
+                    %input{:checked => "checked", :name => "attending", :type => "radio", :value => "true"}
+                  .radio-holder.btn
+                    %span Can't Come
+                    %input{:name => "attending", :type => "radio", :value => "false"}
               .form-section
                 %h6 Meal Preference
                 .radio-group
                   .radio-holder.naked.checked
                     %span Chicken
-                    %input{:checked => "checked", :name => "meal", :type => "radio", :value => "chicken"}
+                    %input{:name => "meal_preference", :type => "radio", :value => "chicken"}
                   .radio-holder.naked
                     %span Beef
-                    %input{:name => "meal", :type => "radio", :value => "beef"}
-                  .radio-holder.naked
-                    %span Veg / GF
-                    %input{:name => "meal", :type => "radio", :value => "veg-gf"}
+                    %input{:name => "meal_preference", :type => "radio", :value => "beef"}
               .form-section
-                %input{:name => "song", :placeholder => "Any Song Requests?", :type => "text"}
+                %h6 Contact (for a reminder)
+                = f.text_field :email, placeholder: :email
+                = f.text_field :phone, placeholder: :phone
               %input{:type => "submit", :value => "RSVP"}
                 .form-error
                   %span Please fill out all fields

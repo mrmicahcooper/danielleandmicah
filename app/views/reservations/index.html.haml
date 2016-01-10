@@ -1,0 +1,25 @@
+.main-container
+  %section.registry.registry-1
+    .container
+      .row
+        %h2
+          Reservations
+    .container
+      %table(style="width: 100%")
+        %thead
+          %tr
+            %th Name
+            %th Email
+            %th Phone
+            %th Attending
+            %th Meal Preference
+            %th Song Preferences
+        %tbody
+          - reservations.each do |reservation|
+            %tr
+              %td= reservation.name
+              %td= reservation.email
+              %td= reservation.phone
+              %td= reservation.attending? ? "yes" : "no"
+              %td= reservation.meal_preference
+              %td= reservation.song_preferences
