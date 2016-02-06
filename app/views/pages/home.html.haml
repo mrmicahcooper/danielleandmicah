@@ -116,13 +116,17 @@
             %dd
 
             %dt Wedding is unplugged
-            %dd Please put away any phones and cameras until after the first dance
+            %dd Please put away any phones and cameras until after the first dance.
       .row
         .col-sm-12.text-center
           .form-wrapper
+            - if flash.any?
+              .alert
+                = flash.alert
             = form_for(reservation, class: :form_email) do |f|
+              Please RSVP each person separately.
               .form-section
-                = f.text_field :name, placeholder: "Name", class: "validate-required"
+                = f.text_field :name, placeholder: "Name", class: "validate-required", required: true
                 .radio-group
                   .radio-holder.btn.checked
                     %span Can't Wait

@@ -13,7 +13,7 @@
             %th Phone
             %th Attending
             %th Meal Preference
-            %th Song Preferences
+            %th Created At
         %tbody
           - reservations.each do |reservation|
             %tr
@@ -22,4 +22,4 @@
               %td= reservation.phone
               %td= reservation.attending? ? "yes" : "no"
               %td= reservation.meal_preference
-              %td= reservation.song_preferences
+              %td= reservation.created_at ? reservation.created_at.to_s(:short) : "-"

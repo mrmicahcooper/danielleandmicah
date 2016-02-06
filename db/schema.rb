@@ -11,18 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151212221920) do
+ActiveRecord::Schema.define(version: 20160206154149) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "reservations", force: :cascade do |t|
-    t.string  "name"
-    t.boolean "attending"
-    t.string  "meal_preference"
-    t.text    "song_preferences"
-    t.string  "email"
-    t.string  "phone"
+    t.string   "name"
+    t.boolean  "attending"
+    t.string   "meal_preference"
+    t.text     "song_preferences"
+    t.string   "email"
+    t.string   "phone"
+    t.datetime "created_at"
   end
 
 end
